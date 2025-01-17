@@ -103,15 +103,30 @@
 .banner-img img{
     width: 100%;
 }
+/* features section */
+.features{
+    display: flex;
+    padding: 100px 0;
+    gap: 80px;
+    align-items: center;
+}
+.team-image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
 
 /* Responsive Css */
 
 @media screen and (max-width:576px){
     .header,
-    .nav-links{
+    .nav-links,
+    .features{
         flex-direction:column;
-    
+    }
+    .banner-contenet{
+        width: 90%;
     }
     .header{
         padding: 20px 0;
@@ -129,11 +144,18 @@
     .section-title{
         font-size: 2rem;
     }
+    .team-image{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media screen and (min-width:577px) and (max-width:920px) {
+    .features{
+        flex-direction:column;
+    }
+    
     .header{
-        padding: 0 100px;
+        padding: 0 60px;
     }
     .section-description{
         font-size: .8rem;
@@ -144,4 +166,5 @@
     .banner{
         padding:0 100px;
     }
+
 }
